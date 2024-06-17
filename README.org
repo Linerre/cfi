@@ -1,0 +1,11 @@
+
+* Running the spruce code
+#+BEGIN_SRC shell
+# Enter the src dir
+cd src
+# Compile all java files
+javac -d . *.java
+
+# Now class files should be under ./craftinginterpreters/lox
+java craftinginterpreters.lox.Lox
+#+END_SRC
