@@ -1,8 +1,8 @@
 
-* Running the spruce code
+* Running the source code
 #+BEGIN_SRC shell
 # Enter the src dir
-cd src
+cd src/jlox
 # Compile all java files
 javac -d . *.java
 

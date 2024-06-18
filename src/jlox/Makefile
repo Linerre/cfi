@@ -1,5 +1,6 @@
 CC := javac
+OPS := -d .
 lexer := Lox.java Scanner.java Token.java TokenType.java
 
-run:
-	$(CC) $(lexer)
+scan:
+	$(CC) $(OPS) $(lexer)

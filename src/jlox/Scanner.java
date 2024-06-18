@@ -192,6 +192,7 @@ class Scanner {
   }
 
   private char advance() {
+    // Return char at current position and increament the position by 1
     return source.charAt(current++);
   }
 
