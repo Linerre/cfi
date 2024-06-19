@@ -2,7 +2,7 @@
 * Running the source code
 #+BEGIN_SRC shell
 # Enter the src dir
-cd src/jlox
+cd src/jlox/lox
 # Compile all java files
 javac -d . *.java
 
