@@ -1,5 +1,5 @@
 CC := javac
-OPS := -d .
+OPS := -d ../build
 lexer := *.java
 
 scan:
