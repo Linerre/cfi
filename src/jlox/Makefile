@@ -10,3 +10,6 @@ build:
 
 print:
 	$(JAVA) -cp $(BUILD) $(CLASSPATH).AstPrinter
+
+run:
+	$(JAVA) -cp $(BUILD) $(CLASSPATH).Lox
