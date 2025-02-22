@@ -144,10 +144,12 @@ class Parser {
     return peek().type == EOF;
   }
 
+  // returns the current token yet to consume
   private Token peek() {
     return tokens.get(current);
   }
 
+  // returns the most recently consumed token
   private Token previous() {
     return tokens.get(current - 1);
   }
@@ -163,7 +165,7 @@ class Parser {
     while (!isAtEnd()) {
       if (previous().type == SEMICOLON) return;
 
-      switch (peek().type) { // peek at next token
+      switch (peek().type) {
         case CLASS:
         case FUN:
         case VAR:
