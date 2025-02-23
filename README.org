@@ -2,10 +2,13 @@
 * Running the source code
 #+BEGIN_SRC shell
 # Enter the src dir
-cd src/jlox/lox
+cd src/jlox
 # Compile all java files
-javac -d . *.java
+make build
 
-# Now class files should be under ./craftinginterpreters/lox
-java craftinginterpreters.lox.Lox
+# Or run the REPL
+make run
+
+# Or read a Lox script and print out the result
+make read
 #+END_SRC
