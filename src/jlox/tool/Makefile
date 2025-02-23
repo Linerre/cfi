@@ -2,10 +2,10 @@ CC = javac
 JAVA = java
 OPS = -d .
 srcfile = GenerateAst.java
-builddir = crafcraftinginterpreters/tool
-
-build: GenerateAst.java
-	$(CC) $(OPS) $(srcfile)
+CLASSPATH = craftinginterpreters.tool
 
 run: build
-	$(JAVA) $(builddir)/GenerateAst
+	$(JAVA) -cp ./ $(CLASSPATH).GenerateAst ./
+
+build: GenerateAst.java
+	$(CC) $(OPS) $<

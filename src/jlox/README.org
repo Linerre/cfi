@@ -1,5 +1,17 @@
+* Grammars
 
-** Lox Grammar (ambiguous)
+** Top level
+#+BEGIN_EXAMPLE
+program        → statement* EOF ;
+
+statement      → exprStmt
+               | printStmt ;
+
+exprStmt       → expression ";" ;
+printStmt      → "print" expression ";" ;
+#+END_EXAMPLE
+
+** Lox Expression Grammar (ambiguous)
 #+BEGIN_EXAMPLE
 expression     → literal
                | unary
@@ -23,7 +35,8 @@ The above grammar is ambiguous. For example, ~6 / 3 - 1~ can have two parse tree
   3   1                       6  3
 #+END_EXAMPLE
 
-** Lox Grammar (unambiguous)
+
+** Lox Expression Grammar (unambiguous)
 #+BEGIN_EXAMPLE
 expression     → equality ;
 equality       → comparison ( ( "!=" | "==" ) comparison )* ;
