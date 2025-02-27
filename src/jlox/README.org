@@ -2,7 +2,10 @@
 
 ** Top level
 #+BEGIN_EXAMPLE
-program        → statement* EOF ;
+program        → declaration* EOF ;
+
+declaration    → varDecl
+               | statement ;
 
 statement      → exprStmt
                | printStmt ;
@@ -10,6 +13,7 @@ statement      → exprStmt
 exprStmt       → expression ";" ;
 printStmt      → "print" expression ";" ;
 #+END_EXAMPLE
+
 
 ** Lox Expression Grammar (ambiguous)
 #+BEGIN_EXAMPLE
@@ -47,4 +51,14 @@ unary          → ( "!" | "-" ) unary
                | primary ;
 primary        → NUMBER | STRING | "true" | "false" | "nil"
                | "(" expression ")" ;
+#+END_EXAMPLE
+
+
+** Declaration Grammar
+#+BEGIN_EXAMPLE
+varDecl        → "var" IDENTIFIER ( "=" expression )? ";" ;
+primary        → "true" | "false" | "nil"
+               | NUMBER | STRING
+               | "(" expression ")"
+               | IDENTIFIER ;
 #+END_EXAMPLE
